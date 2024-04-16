@@ -16,9 +16,10 @@ RUN npm install
 
 # Bundle app source
 # COPY . .
-ENV SERVER_PORT=8000
+ENV SERVER_PORT=8001
+ENV DB_NAME="Controller2"
 # Expose the port your app runs on
-EXPOSE 8000
+EXPOSE 8001
 
 CMD node server.js
 # Define environment variables

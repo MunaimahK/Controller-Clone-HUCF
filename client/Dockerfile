@@ -21,10 +21,10 @@ RUN npm install --force
 
 # Define environment variables
 #ENV NODE_ENV=production
-ENV PORT=3002
+ENV PORT=3003
 
 # Expose the port your app runs on
-EXPOSE 3002
+EXPOSE 3003
 
 # Run the application
 CMD ["npm", "start"]
