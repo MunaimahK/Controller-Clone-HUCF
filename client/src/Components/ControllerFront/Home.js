@@ -18,7 +18,7 @@ const Home = () => {
           <img
             className="home-img"
             // src = {logo}
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCTvdxJ49OhGebwGyFeJ6KdU1xI3texup4sg&s"
+            src="https://scontent.ftpa1-2.fna.fbcdn.net/v/t39.30808-1/326217856_972910493676296_8537314512659876607_n.jpg?stp=dst-jpg_p480x480&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=mkAQmTM5zvkAb6U_4nO&_nc_ht=scontent.ftpa1-2.fna&oh=00_AfC4gDVATbzxbmb30rOEp8vUAV0qCzROBVyu37CGZP3s9w&oe=66261A89"
           />
         </div>
       </div>
