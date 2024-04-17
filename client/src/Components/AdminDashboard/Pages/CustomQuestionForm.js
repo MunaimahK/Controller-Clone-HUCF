@@ -29,7 +29,9 @@ const CustomQuestionForm = () => {
         console.log("CQ RETURNED", res.data.customquestion);
         setCurrentQ(res.data.customquestion);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   const addToCQList = async (req, res) => {
@@ -128,44 +130,45 @@ const CustomQuestionForm = () => {
                 during Club Enrollment
               </Typography>
             </div>
-            {currentQ.map((output) => (
-              <Box>
-                <Card sx={{ margin: "1vh" }}>
-                  <CardContent>
-                    <div className="card-content-container">
-                      <div className="btn-container">
-                        <Button
-                          variant="contained"
-                          style={{
-                            backgroundColor: "gray",
-                            color: "white",
-                            borderRadius: "15px",
-                            width: "12px",
-                            fontSize: "10px",
-                            minWidth: "10px",
-                            width: "23px",
-                            padding: "3px",
-                          }}
-                          onClick={() => removeQ(output._id)}
-                        >
-                          X
-                        </Button>
+            {currentQ &&
+              currentQ.map((output) => (
+                <Box>
+                  <Card sx={{ margin: "1vh" }}>
+                    <CardContent>
+                      <div className="card-content-container">
+                        <div className="btn-container">
+                          <Button
+                            variant="contained"
+                            style={{
+                              backgroundColor: "gray",
+                              color: "white",
+                              borderRadius: "15px",
+                              width: "12px",
+                              fontSize: "10px",
+                              minWidth: "10px",
+                              width: "23px",
+                              padding: "3px",
+                            }}
+                            onClick={() => removeQ(output._id)}
+                          >
+                            X
+                          </Button>
+                        </div>
+                        <div className="text-container-card">
+                          {" "}
+                          <Typography
+                            sx={{ fontSize: 14 }}
+                            color="text.secondary"
+                            gutterBottom
+                          >
+                            {output.question}
+                          </Typography>
+                        </div>
                       </div>
-                      <div className="text-container-card">
-                        {" "}
-                        <Typography
-                          sx={{ fontSize: 14 }}
-                          color="text.secondary"
-                          gutterBottom
-                        >
-                          {output.question}
-                        </Typography>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Box>
-            ))}
+                    </CardContent>
+                  </Card>
+                </Box>
+              ))}
           </div>
         </div>
       </div>

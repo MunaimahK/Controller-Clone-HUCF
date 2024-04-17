@@ -28,8 +28,8 @@ import Events from "./Components/AdminDashboard/Pages/Events";
 import EventPage from "./Components/ControllerFront/EventPage";
 import Payment from "./Components/ControllerFront/Payment";
 
-axios.defaults.baseURL = "http://localhost:8000";
-// axios.defaults.baseURL = `${process.env.BASE_URL}`;
+axios.defaults.baseURL = "http://localhost:8001";
+// ßaxios.defaults.baseURL = `${process.env.BASE_URL}`;
 // axios.defaults.baseURL = `http://localhost:${process.env.SERVER_PORT}`;
 console.log("server port", process.env.SERVER_PORT);
 axios.defaults.withCredentials = true;

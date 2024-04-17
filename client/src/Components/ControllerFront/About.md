@@ -1,6 +1,6 @@
 # About Us
 
-Welcome to our website! We're thrilled to have you here.
+Welcome to our website! We're thrilled to have you here. This is hack @ ucf
 
 ## Our Mission
 

@@ -11,8 +11,8 @@ const Home = () => {
       <div className="home-banner-container">
         <div className="home-bannerImage-container"></div>
         <div className="home-text-section">
-          <h1 className="primary-heading">KnightHacks</h1>
-          <p className="primary-text">Welcome to the Hackathon!</p>
+          <h1 className="primary-heading">Hack@UCF</h1>
+          <p className="primary-text">Let's get Hacking</p>
         </div>
         <div className="home-image-section">
           <img

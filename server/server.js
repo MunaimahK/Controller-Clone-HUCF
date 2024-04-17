@@ -36,19 +36,20 @@ const corsOptions = {
   optionSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
-/*
+
 try {
-  // const db = mongoose.connect("mongodb://localhost:27017/Controller1");
-  const db = mongoose.connect("mongodb://mongo:27017/Controller1");
+  // const db = mongoose.connect("mongodb://localhost:27017/Controller2");
+  const db = mongoose.connect("mongodb://localhost:27017/Controller2");
   // const db = mongoose.connect(process.env.MONGO_URL);
   // const db = mongoose.connect("mongodb://localhost:27017/Controller1");
   console.log("Connected");
 } catch (error) {
   handleError(error);
-}*/
+} /*
 const connectWithRetry = async () => {
   try {
-    await mongoose.connect(`mongodb://mongo:27017/Controller1`, {
+    // await mongoose.connect(`mongodb://mongo:27017/${process.env.DB_NAME}`, {
+    await mongoose.connect(`mongodb://localhost:27017/${process.env.DB_NAME}`, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
@@ -60,7 +61,7 @@ const connectWithRetry = async () => {
   }
 };
 
-connectWithRetry();
+connectWithRetry();*/
 
 app.use("/", require("./Routes/routes"));
 

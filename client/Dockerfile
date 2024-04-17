@@ -22,6 +22,7 @@ RUN npm install --force
 # Define environment variables
 #ENV NODE_ENV=production
 ENV PORT=3003
+ENV BASE_URL=8001
 
 # Expose the port your app runs on
 EXPOSE 3003
