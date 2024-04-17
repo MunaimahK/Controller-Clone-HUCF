@@ -16,11 +16,11 @@ const PayDues = () => {
     axios.defaults.withCredentials = true;
     try {
       const data = axios
-        .get("http://localhost:8000/checkout-session", {
+        .get("http://localhost:8001/checkout-session", {
           headers: {
             "Content-Type": "application/json",
           },
-        })
+        }) /*
         .then(async (res) => {
           console.log(res.data.msg);
           console.log("2: ", res.data.msg);
@@ -35,7 +35,7 @@ const PayDues = () => {
                 paidStatus = res.data.paidDues;
                 setPaid(res.data.paidDues);
                 if (!res.data.paidDues) {
-                  window.location.replace(red_url);
+                  //  window.location.replace(red_url);
                   console.log("PRESENT");
                 }
               });
@@ -45,6 +45,18 @@ const PayDues = () => {
           // setPaid(paidStatus);
 
           // if success_url, then update paidDues to true
+        });*/
+        .then(async (res) => {
+          console.log(res.data.msg);
+          console.log("2: ", res.data.msg);
+          const red_url = res.data.msg;
+
+          window.location.replace(red_url);
+        })
+        .then(async () => {
+          const data = (await axios.get("/update-paid-dues")).then((res) => {
+            console.log(res);
+          });
         });
     } catch (err) {
       console.log(err);

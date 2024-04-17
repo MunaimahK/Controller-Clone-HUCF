@@ -2,6 +2,7 @@ require("dotenv");
 const stripe = require("stripe")(process.env.STRIPE_TOKEN);
 
 const stripeEP = async (req, res) => {
+  console.log(process.env.STRIPE_PRICE);
   const session = await stripe.checkout.sessions.create({
     line_items: [
       {

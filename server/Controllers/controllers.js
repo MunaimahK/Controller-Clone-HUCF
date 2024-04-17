@@ -11,6 +11,7 @@ const sendEmail = require("./sendEmail.js");
 require("dotenv");
 const cookies = require("cookies");
 let countDefAdmin = 0;
+var admincount = 0;
 const test = (req, res) => {
   res.json({ error: true });
   /* res.redirect(301, "http://localhost:3000");*/
@@ -145,9 +146,16 @@ const register = async (req, res) => {
     console.log(error);
   }
 };
+
 // Login Endpoint;endpoint connected to route in LoginOut.js
 const login = async (req, res) => {
-  defaultAdmin(req, res);
+  if (admincount === 0) {
+    defaultAdmin(req, res);
+    admincount++;
+
+    // assignUID(data, res);
+    // RESUME LATER
+  }
   try {
     // take the username user logs in with and store in const username
     const { username, password } = req.query;

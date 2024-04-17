@@ -141,7 +141,7 @@ const Events = () => {
                 <div>
                   {" "}
                   <FormLabel style={{ marginLeft: "2vh", marginTop: "2vh" }}>
-                    Event Location
+                    Event Date
                   </FormLabel>
                   <br></br>
                   <input

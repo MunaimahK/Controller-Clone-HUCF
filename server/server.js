@@ -45,7 +45,9 @@ try {
   console.log("Connected");
 } catch (error) {
   handleError(error);
-} /*
+}
+// USED WITH DOCKER-COMPOSE
+/*
 const connectWithRetry = async () => {
   try {
     // await mongoose.connect(`mongodb://mongo:27017/${process.env.DB_NAME}`, {
